@@ -64,7 +64,7 @@ const checkAadharPanLinkStatus = async (pan, aadhaarNumber) => {
 
 export default async function handler(req, res) {
 	try {
-		const { aadhar, pan } = req.body;
+		const { aadhar, pan } = req.query;
 
 		const data = await checkAadharPanLinkStatus(pan, aadhar);
 		console.log(data);
